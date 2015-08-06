@@ -1,7 +1,7 @@
 # _bar
 Update your site’s core language setting in WordPress via toolbar (aka admin bar).
 
-![Update Site Language Option via Admin Bar](https://github.com/glueckpress/_bar/raw/master/inc/site-language/screenshot.gif)
+![Update Site Language Option via Admin Bar](https://github.com/glueckpress/_bar/raw/master/modules/site-language/screenshot.gif)
 
 ## Description
 **This is not a plugin for multilingual WordPress, translating content and the like!**
