@@ -1,50 +1,13 @@
 <?php
 /**
- * Plugin Name: _bar
- * Description: Lets you update your site language option in WordPress via the toolbar (aka admin bar).
- * Version:     0.1
- * Author:      Caspar Hübinger
- * Plugin URI:  https://github.com/glueckpress/_bar/
- * Author URI:  https://profiles.wordpress.org/glueckpress
- * License: GNU General Public License v3
- * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: _bar
- * Domain Path: /languages
+ * Module Name: Site Language
+ * Description: Update your site’s core language setting via toolbar.
  */
 
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-
-/**
- * Initialize plugin.
- *
- * @return void
- */
-function _bar__load() {
-
-	// Admins only.
-	if ( ! current_user_can( 'manage_options' ) )
-		return;
-
-	$plugin_slug = plugin_basename( __FILE__ );
-	load_plugin_textdomain(
-		'_bar',
-		false,
-		dirname( $plugin_slug ) . '/languages/'
-	);
-
-	// Register + enqueue scripts.
-	add_action( 'wp_enqueue_scripts', '_bar__enqueue_scripts' );
-	add_action( 'admin_enqueue_scripts', '_bar__enqueue_scripts' );
-	add_action( 'wp_ajax_' . '_bar_update_site_language', '_bar__update_site_language' );
-
-	// Add admin bar menu after “Edit” on singular views.
-	add_action( 'admin_bar_menu', '_bar__admin_bar_menu', 90 );
-}
-add_action( 'plugins_loaded', '_bar__load' );
+add_action( 'wp_enqueue_scripts', '_bar__site_language__enqueue_scripts' );
+add_action( 'admin_enqueue_scripts', '_bar__site_language__enqueue_scripts' );
+add_action( 'wp_ajax_' . '_bar_update_site_language', '_bar__site_language__update_wplang' );
+add_action( 'admin_bar_menu', '_bar__site_language__admin_bar_menu', 90 );
 
 
 /**
@@ -52,26 +15,28 @@ add_action( 'plugins_loaded', '_bar__load' );
  *
  * @return void
  */
-function _bar__enqueue_scripts() {
+function _bar__site_language__enqueue_scripts() {
 
 	// This.
 	wp_register_script(
-		'_bar',
-		plugins_url( '/assets/js/_bar.js', __FILE__ ),
+		'_bar-site-language',
+		plugins_url( '/js/_bar-site-language.js', __FILE__ ),
 		array( 'jquery' ),
 		'',
 		true
 	);
 
 	// There.
-	wp_enqueue_script( '_bar' );
+	wp_enqueue_script( '_bar-site-language' );
 
 	// Like that.
-	wp_localize_script( '_bar', '_bar',
+	wp_localize_script( '_bar-site-language', '_bar',
 		array(
-			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-			'nonce'   => wp_create_nonce( 'site_language' ),
-			'message' => __( 'Site language could not be switched. You’re being redirected to Settings &rarr; General.', '_bar' )
+			'language' => array(
+				'ajaxurl' => admin_url( 'admin-ajax.php' ),
+				'nonce'   => wp_create_nonce( 'site_language' ),
+				'message' => __( 'Site language could not be switched. You’re being redirected to Settings &rarr; General.', '_bar' )
+			)
 		)
 	);
 }
@@ -82,7 +47,7 @@ function _bar__enqueue_scripts() {
  *
  * @return void
  */
-function _bar__update_site_language(){
+function _bar__site_language__update_wplang(){
 
 	// Verifying all the things.
 	_bar__validate_ajax_request();
@@ -135,7 +100,7 @@ function _bar__validate_ajax_request() {
  * @param  object $bar Admin bar object
  * @return void
  */
-function _bar__admin_bar_menu( $bar ) {
+function _bar__site_language__admin_bar_menu( $bar ) {
 
 	// Get available languages, bail if none.
 	$languages = _bar__get_languages();
