@@ -39,7 +39,7 @@ function _bar__load() {
 	/**
 	 * Modules
 	 */
-	$module_dir = dirname( __FILE__ ) . '/inc';
+	$module_dir = dirname( __FILE__ ) . '/modules';
 
 	// Site Language
 	require_once( $module_dir . '/site-language/site-language.php' );
