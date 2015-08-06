@@ -14,7 +14,6 @@ After having activated the plugin, you’ll see a new menu item _Site Language_ 
 
 **Clicking on a language link will update the site language option and reload the current page. Voilá, site language updated!** :boom:
 
-
 ### Languages
 * English (en\_US) _(default)_
 * German (de_DE)

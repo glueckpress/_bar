@@ -25,8 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function _bar__load() {
 
-	$plugin_slug = plugin_basename( __FILE__ );
+	// Admins only.
+	if ( ! current_user_can( 'manage_options' ) )
+		return;
 
+	$plugin_slug = plugin_basename( __FILE__ );
 	load_plugin_textdomain(
 		'_bar',
 		false,
@@ -37,10 +40,9 @@ function _bar__load() {
 	add_action( 'wp_enqueue_scripts', '_bar__enqueue_scripts' );
 	add_action( 'admin_enqueue_scripts', '_bar__enqueue_scripts' );
 	add_action( 'wp_ajax_' . '_bar_update_site_language', '_bar__update_site_language' );
-	add_action( 'wp_ajax_nopriv_' . '_bar_update_site_language', '_bar__update_site_language' );
 
-	// Add admin bar menu after “New” item.
-	add_action( 'admin_bar_menu', '_bar__admin_bar_menu', 80 );
+	// Add admin bar menu after “Edit” on singular views.
+	add_action( 'admin_bar_menu', '_bar__admin_bar_menu', 90 );
 }
 add_action( 'plugins_loaded', '_bar__load' );
 
@@ -82,12 +84,10 @@ function _bar__enqueue_scripts() {
  */
 function _bar__update_site_language(){
 
-	// Validate or die.
-	if( ! wp_verify_nonce( $_REQUEST['nonce'], 'site_language' ) ){
-		wp_send_json_error();
-	}
+	// Verifying all the things.
+	_bar__validate_ajax_request();
 
-	$new_language = $_REQUEST[ 'language' ];
+	$new_language = $_POST[ 'language' ];
 
 	// get_option( 'WPLANG' ) === '' for default English
 	$new_language = ( 'en_US' === $new_language ) ? '' : $new_language;
@@ -106,18 +106,91 @@ function _bar__update_site_language(){
 
 
 /**
- * Menu in the admin bar.
+ * Validate AJAX requests.
  *
  * @return void
  */
-function _bar__admin_bar_menu() {
+function _bar__validate_ajax_request() {
 
-	// Early bailing.
+	// Request method.
+	if ( ! $_SERVER[ 'REQUEST_METHOD' ]  === 'POST' ) {
+		wp_send_json_error();
+	}
+
+	// Required POST data.
+	if ( ! isset( $_POST[ 'language' ] ) || ! isset( $_POST[ 'nonce' ] ) ) {
+		wp_send_json_error();
+	}
+
+	// Nonce.
+	if( ! wp_verify_nonce( $_POST['nonce'], 'site_language' ) ){
+		wp_send_json_error();
+	}
+}
+
+
+/**
+ * Menu in the admin bar.
+ *
+ * @param  object $bar Admin bar object
+ * @return void
+ */
+function _bar__admin_bar_menu( $bar ) {
+
+	// Get available languages, bail if none.
+	$languages = _bar__get_languages();
+	if ( ! $languages )
+		return $bar;
+
+	/* Admin bar menu business. */
+	$parent = '_bar-menu';
+
+	// Fallback: send to Settings -> General.
+	$href   = admin_url( 'options-general.php#WPLANG' );
+	$meta   = array();
+	$locale = get_locale();
+
+	// Add parent menu item.
+	$bar->add_menu( array(
+		'id'    => $parent,
+		'title' => __( 'Site Language', '_bar' ),
+		'href'  => false
+	) );
+
+	// Iterate through installed translations.
+	foreach ( $languages as $language ) {
+
+		// Exclude current locale.
+		if ( $locale === $language[ 'language' ] ) {
+			unset( $language );
+			continue;
+		}
+
+		// Add submenu items.
+		$bar->add_menu( array(
+			'parent' => $parent,
+			'id'     => $language[ 'language' ],
+			'title'  => $language[ 'native_name' ],
+			'href'   => $href,
+			'meta'   => array(
+				'class'  => '_bar-language-item',
+				'rel'    => $language[ 'language' ],
+			),
+		) );
+	}
+}
+
+
+/**
+ * Retrieve rich data for available core languages.
+ *
+ * @return array|bool Array of language data, or false
+ */
+function _bar__get_languages() {
+
 	$available_languages = get_available_languages();
-	if ( ! current_user_can( 'manage_options' ) || empty( $available_languages ) )
-		return;
-
-	$bar = $GLOBALS[ 'wp_admin_bar' ];
+	if ( 0 === count( $available_languages ) )
+		return false;
 
 	/* Core l10n niftification. */
 	require_once( ABSPATH . 'wp-admin/includes/translation-install.php' );
@@ -148,46 +221,5 @@ function _bar__admin_bar_menu() {
 		}
 	}
 
-	/* Admin bar menu business. */
-	$parent = '_bar-menu';
-
-	// Fallback: send to Settings -> General.
-	$href   = admin_url( 'options-general.php#WPLANG' );
-	$meta   = array();
-	$locale = get_locale();
-
-	// Add parent menu item.
-	$bar->add_menu( array(
-		'id'    => $parent,
-		'title' => __( 'Site Language', '_bar' ),
-		'href'  => false
-	) );
-
-	// Iterate through installed translations.
-	foreach ( $languages as $language ) {
-
-		// Exclude current locale.
-		if ( $locale === $language[ 'language' ] ) {
-			unset( $language );
-			continue;
-		}
-
-		// Add submenu items.
-		$nonce_id = $parent . '-' . $language[ 'language' ];
-		$bar->add_menu( array(
-			'parent' => $parent,
-			'id'     => $language[ 'language' ],
-			'title'  => $language[ 'native_name' ],
-			'href'   => $href,
-			'meta'   => array(
-				'class'  => '_bar-language-item',
-				'html'   => sprintf(
-					'<input type="hidden" name="%1$s" id="%2$s" value="%2$s" />',
-					$nonce_id,
-					wp_create_nonce( $nonce_id )
-				),
-				'rel'    => $language[ 'language' ],
-			),
-		) );
-	}
+	return $languages;
 }
