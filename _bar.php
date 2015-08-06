@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: _bar
- * Description: Nifty hacks for the WordPress admin toolbar (aka admin bar).
+ * Description: Update your site’s core language setting in WordPress via toolbar (aka admin bar).
  * Version:     0.1
  * Author:      Caspar Hübinger
  * Plugin URI:  https://github.com/glueckpress/_bar/
