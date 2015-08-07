@@ -71,7 +71,7 @@ function _bar__site_language__update_wplang(){
 
 
 /**
- * Validate AJAX requests.
+ * Validate AJAX requests. Props @Chrico!
  *
  * @return void
  */
