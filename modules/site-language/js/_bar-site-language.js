@@ -1,6 +1,6 @@
 ;(function($) {
 	(function() {
-		$( document ).on( 'click', '._bar-language-item > a', function(event) {
+		$( document ).on( 'click', '._bar__site-language-item > a[rel]', function(event) {
 			// Bail if there isn’t any language identifier.
 			if ( $(this).attr('rel') === undefined ) {
 				alert( _bar.language.message );
