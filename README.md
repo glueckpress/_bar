@@ -43,6 +43,7 @@ The Plugins Menu provides simple shortcuts to the plugins page in the back-end, 
 
 ![Go to plugins page (filtered by status) via toolbar](https://github.com/glueckpress/_bar/raw/master/modules/plugins-menu/screenshot.png)
 
+---
 
 ### Languages
 
