@@ -44,6 +44,9 @@ function _bar__load() {
 	// Site Language
 	require_once( $module_dir . '/site-language/site-language.php' );
 
+	// Plugins Menu
+	require_once( $module_dir . '/plugins-menu/plugins-menu.php' );
+
 }
 add_action( 'plugins_loaded', '_bar__load' );
 
