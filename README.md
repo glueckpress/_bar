@@ -60,6 +60,10 @@ The Plugins Menu provides simple shortcuts to the plugins page in the back-end, 
 
 ## Changelog
 
+### 0.3
+
+* added support for [GitHub updater plugin](https://github.com/afragen/github-updater) by @afragen
+
 ### 0.2
 
 * new module: plugins menu
