@@ -108,7 +108,7 @@ function _bar__site_language__admin_bar_menu( $bar ) {
 		return $bar;
 
 	/* Admin bar menu business. */
-	$parent = '_bar__site-language';
+	$parent = 'bar__site-language';
 
 	// Fallback: send to Settings -> General.
 	$href   = admin_url( 'options-general.php#WPLANG' );
@@ -121,7 +121,7 @@ function _bar__site_language__admin_bar_menu( $bar ) {
 		'title' => __( 'Site Language', '_bar' ),
 		'href'  => $href,
 		'meta'   => array(
-			'class'  => '_bar__dashicon-parent _bar__dashicon-parent--translation',
+			'class'  => 'bar__dashicon-parent bar__dashicon-parent--translation',
 		),
 	) );
 
@@ -137,11 +137,11 @@ function _bar__site_language__admin_bar_menu( $bar ) {
 		// Add submenu items.
 		$bar->add_menu( array(
 			'parent' => $parent,
-			'id'     => sprintf( '_bar__site-language-item--%s', $language[ 'language' ] ),
+			'id'     => sprintf( 'bar__site-language-item--%s', $language[ 'language' ] ),
 			'title'  => $language[ 'native_name' ],
 			'href'   => $href,
 			'meta'   => array(
-				'class'  => '_bar__site-language-item',
+				'class'  => 'bar__site-language-item',
 				'rel'    => $language[ 'language' ],
 			),
 		) );

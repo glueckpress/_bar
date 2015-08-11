@@ -46,10 +46,10 @@ function _bar__load() {
 	require_once( $module_dir . '/site-language/site-language.php' );
 
 	// Plugins Menu
-	require_once( $module_dir . '/plugins-menu/plugins-menu.php' );
+	require_once( $module_dir . '/plugins/plugins.php' );
 
 	// Trim default menu items
-	require_once( $module_dir . '/trim-to-icon/trim-to-icon.php' );
+	require_once( $module_dir . '/icons/icons.php' );
 
 }
 add_action( 'plugins_loaded', '_bar__load' );

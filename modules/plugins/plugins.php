@@ -4,7 +4,7 @@
  * Description: Add a quick link menu to plugins status pages.
  */
 
-add_action( 'admin_bar_menu', '_bar__plugins_menu', 90 );
+add_action( 'admin_bar_menu', '_bar__plugins', 90 );
 
 
 /**
@@ -13,10 +13,10 @@ add_action( 'admin_bar_menu', '_bar__plugins_menu', 90 );
  * @param  object $bar Admin bar object
  * @return void
  */
-function _bar__plugins_menu( $bar ) {
+function _bar__plugins( $bar ) {
 
 	/* Admin bar menu business. */
-	$parent = '_bar__plugins';
+	$parent = 'bar__plugins';
 
 	// Fallback: send to Plugins -> All.
 	$url   = admin_url( 'plugins.php' );
@@ -28,7 +28,7 @@ function _bar__plugins_menu( $bar ) {
 		'title' => __( 'Plugins' ),
 		'href'  => $url,
 		'meta'   => array(
-			'class'  => '_bar__dashicon-parent _bar__dashicon-parent--plugins',
+			'class'  => 'bar__dashicon-parent bar__dashicon-parent--plugins',
 			'target' => '_blank',
 		),
 	) );
@@ -50,11 +50,11 @@ function _bar__plugins_menu( $bar ) {
 		// Add submenu items.
 		$bar->add_menu( array(
 			'parent' => $parent,
-			'id'     => "_bar__plugins-item--$id",
+			'id'     => "bar__plugins-item--$id",
 			'title'  => $label,
 			'href'   => $url,
 			'meta'   => array(
-				'class'  => '_bar-plugins-item',
+				'class'  => 'bar-plugins-item',
 				'target' => '_blank',
 			),
 		) );

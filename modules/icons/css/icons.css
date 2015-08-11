@@ -8,14 +8,14 @@
 #wpadminbar #wp-admin-bar-customize,
 #wpadminbar #wp-admin-bar-new-content,
 #wpadminbar #wp-admin-bar-edit,
-#wpadminbar #wp-admin-bar-_bar__site-language,
-#wpadminbar #wp-admin-bar-_bar__plugins {
+#wpadminbar #wp-admin-bar-bar__site-language,
+#wpadminbar #wp-admin-bar-bar__plugins {
 	width: 34px;
 }
 #wpadminbar #wp-admin-bar-site-name > a,
 #wpadminbar #wp-admin-bar-customize > a,
-#wpadminbar #wp-admin-bar-_bar__site-language > a,
-#wpadminbar #wp-admin-bar-_bar__plugins > a {
+#wpadminbar #wp-admin-bar-bar__site-language > a,
+#wpadminbar #wp-admin-bar-bar__plugins > a {
 	color: rgba(0,0,0,0);
 	overflow: hidden;
 	white-space: nowrap;
@@ -25,7 +25,7 @@
 }
 
 /* Iconize _bar menus. */
-#wpadminbar ._bar__dashicon-parent > a:before {
+#wpadminbar .bar__dashicon-parent > a:before {
 	color: #a0a5aa;
 	color: rgba(240,245,250,0.6);
 	content: '';
@@ -40,10 +40,10 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-#wpadminbar ._bar__dashicon-parent--translation > a:before {
+#wpadminbar .bar__dashicon-parent--translation > a:before {
 	content: "\f326";
 }
-#wpadminbar ._bar__dashicon-parent--plugins > a:before {
+#wpadminbar .bar__dashicon-parent--plugins > a:before {
 	content: "\f106";
 }
 
