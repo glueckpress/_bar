@@ -1,7 +1,7 @@
 <?php
 /**
  * Module Name: Plugins Menu
- * Description: Adds a quick link menu to plugins status pages.
+ * Description: Add a quick link menu to plugins status pages.
  */
 
 add_action( 'admin_bar_menu', '_bar__plugins_menu', 90 );
@@ -28,7 +28,7 @@ function _bar__plugins_menu( $bar ) {
 		'title' => __( 'Plugins' ),
 		'href'  => $url,
 		'meta'   => array(
-			'class'  => '_bar__plugins-item',
+			'class'  => '_bar__dashicon-parent _bar__dashicon-parent--plugins',
 			'target' => '_blank',
 		),
 	) );

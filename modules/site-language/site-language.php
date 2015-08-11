@@ -22,7 +22,7 @@ function _bar__site_language__enqueue_scripts() {
 		'_bar-site-language',
 		plugins_url( '/js/_bar-site-language.js', __FILE__ ),
 		array( 'jquery' ),
-		'',
+		false,
 		true
 	);
 
@@ -120,6 +120,9 @@ function _bar__site_language__admin_bar_menu( $bar ) {
 		'id'    => $parent,
 		'title' => __( 'Site Language', '_bar' ),
 		'href'  => $href,
+		'meta'   => array(
+			'class'  => '_bar__dashicon-parent _bar__dashicon-parent--translation',
+		),
 	) );
 
 	// Iterate through installed translations.
