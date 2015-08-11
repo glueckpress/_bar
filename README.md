@@ -7,12 +7,13 @@ Yet another admin bar menu plugin. This one has modules.
 
 ### Modules
 
-* [Site Language Menu](#user-content-site-language-menu)
-* [Plugins Menu](#user-content-plugins-menu)
+* [Site Language](#user-content-site-language)
+* [Plugins](#user-content-plugins-menu)
+* [Icons](#user-content-plugins-menu)
 
 ---
 
-#### Site Language Menu
+#### Site Language
 
 Update your site’s core language setting in WordPress via toolbar (aka admin bar).
 
@@ -31,7 +32,7 @@ After having activated the plugin, you’ll see a new menu item _Site Language_ 
 **Clicking on a language link will update the site language option and reload the current page. Voilá, site language updated!** :boom:
 
 
-#### Plugins Menu
+#### Plugins
 
 The Plugins Menu provides simple shortcuts to the plugins page in the back-end, filtered by plugin status. Links open in a new tab/window. Link URLs in the menu read from top to bottom:
 
@@ -41,7 +42,14 @@ The Plugins Menu provides simple shortcuts to the plugins page in the back-end, 
 * __Recently Active__: `[admin_url]/plugins.php?plugin_status=recently_activated`
 * __Update Available__: `[admin_url]/plugins.php?plugin_status=upgrade`
 
-![Go to plugins page (filtered by status) via toolbar](https://github.com/glueckpress/_bar/raw/master/modules/plugins-menu/screenshot.png)
+![Go to plugins page (filtered by status) via toolbar](https://github.com/glueckpress/_bar/raw/master/modules/plugins/screenshot.png)
+
+
+### Icons
+
+Trim top-level menu items in the toolbar to just display a dashicon. Save some space for more modules!
+
+![Trim top-level menu items in the toolbar to display only icons](https://github.com/glueckpress/_bar/raw/master/modules/icons/screenshot.png)
 
 ---
 
@@ -62,11 +70,14 @@ The Plugins Menu provides simple shortcuts to the plugins page in the back-end, 
 
 ### 0.3
 
-* added support for [GitHub updater plugin](https://github.com/afragen/github-updater) by @afragen
+* simplified module names and css classes.
+* added trim-to-icon support for existing modules.
+* new module: trim parent menu items to display only a dashicon.
+* added support for [GitHub updater plugin](https://github.com/afragen/github-updater) by @afragen.
 
 ### 0.2
 
-* new module: plugins menu
+* new module: plugins menu.
 * minor enhancements: added settings page url to parent item. mo’ better code styling.
 
 ### 0.1
