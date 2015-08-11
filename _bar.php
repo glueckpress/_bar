@@ -1,15 +1,16 @@
 <?php
 /**
- * Plugin Name: _bar
- * Description: Update your site’s core language setting in WordPress via toolbar (aka admin bar).
- * Version:     0.2
- * Author:      Caspar Hübinger
- * Plugin URI:  https://github.com/glueckpress/_bar/
- * Author URI:  https://profiles.wordpress.org/glueckpress
- * License: GNU General Public License v3
- * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: _bar
- * Domain Path: /languages
+ * Plugin Name:       _bar
+ * Description:       Update your site’s core language setting in WordPress via toolbar (aka admin bar).
+ * Version:           0.2
+ * Author:            Caspar Hübinger
+ * Plugin URI:        https://github.com/glueckpress/_bar/
+ * GitHub Plugin URI: https://github.com/glueckpress/_bar
+ * Author URI:        https://profiles.wordpress.org/glueckpress
+ * License: GNU       General Public License v3
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
+ * Text Domain:       _bar
+ * Domain Path:       /languages
  */
 
 
