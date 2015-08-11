@@ -48,6 +48,9 @@ function _bar__load() {
 	// Plugins Menu
 	require_once( $module_dir . '/plugins-menu/plugins-menu.php' );
 
+	// Trim default menu items
+	require_once( $module_dir . '/trim-to-icon/trim-to-icon.php' );
+
 }
 add_action( 'plugins_loaded', '_bar__load' );
 

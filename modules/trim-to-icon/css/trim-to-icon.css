@@ -1,0 +1,49 @@
+/**
+ * Plugin: _bar
+ * Module: Trim to icon
+ */
+
+/* Trim menus. */
+#wpadminbar #wp-admin-bar-site-name,
+#wpadminbar #wp-admin-bar-customize,
+#wpadminbar #wp-admin-bar-new-content,
+#wpadminbar #wp-admin-bar-edit,
+#wpadminbar #wp-admin-bar-_bar__site-language,
+#wpadminbar #wp-admin-bar-_bar__plugins {
+	width: 34px;
+}
+#wpadminbar #wp-admin-bar-site-name > a,
+#wpadminbar #wp-admin-bar-customize > a,
+#wpadminbar #wp-admin-bar-_bar__site-language > a,
+#wpadminbar #wp-admin-bar-_bar__plugins > a {
+	color: rgba(0,0,0,0);
+	overflow: hidden;
+	white-space: nowrap;
+}
+#wpadminbar #wp-admin-bar-new-content > a .ab-label {
+	display: none;
+}
+
+/* Iconize _bar menus. */
+#wpadminbar ._bar__dashicon-parent > a:before {
+	color: #a0a5aa;
+	color: rgba(240,245,250,0.6);
+	content: '';
+	display: inline-block;
+	float: left;
+	font: normal 20px/1 'dashicons';
+	speak: none;
+	margin-right: 6px;
+	padding: 4px 0;
+	position: relative;
+	top: 2px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+#wpadminbar ._bar__dashicon-parent--translation > a:before {
+	content: "\f326";
+}
+#wpadminbar ._bar__dashicon-parent--plugins > a:before {
+	content: "\f106";
+}
+
