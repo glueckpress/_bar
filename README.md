@@ -8,8 +8,8 @@ Yet another admin bar menu plugin. This one has modules.
 ### Modules
 
 * [Site Language](#user-content-site-language)
-* [Plugins](#user-content-plugins-menu)
-* [Icons](#user-content-plugins-menu)
+* [Plugins](#user-content-plugins)
+* [Icons](#user-content-icons)
 
 ---
 
