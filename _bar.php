@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       _bar
  * Description:       Handy toolbar menus for the lazy WordPress developer.
- * Version:           0.3
+ * Version:           0.4-development
  * Author:            Caspar Hübinger
  * Plugin URI:        https://github.com/glueckpress/_bar/
  * GitHub Plugin URI: https://github.com/glueckpress/_bar

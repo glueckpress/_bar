@@ -68,6 +68,10 @@ Trim top-level menu items in the toolbar to just display a dashicon. Save some s
 
 ## Changelog
 
+### 0.4
+
+* module|icons: minor css fix
+
 ### 0.3
 
 * simplified module names and css classes.
