@@ -14,6 +14,7 @@
 }
 #wpadminbar #wp-admin-bar-site-name > a,
 #wpadminbar #wp-admin-bar-customize > a,
+#wpadminbar #wp-admin-bar-edit > a,
 #wpadminbar #wp-admin-bar-bar__site-language > a,
 #wpadminbar #wp-admin-bar-bar__plugins > a {
 	color: rgba(0,0,0,0);
