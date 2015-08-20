@@ -1,23 +1,31 @@
 # _bar
+* Contributors:      Caspar Hübinger
+* Tags:              admin, adminbar, adminmenu, developer, toolbar
+* Requires at least: 4.0
+* Tested up to:      4.3
+* Stable tag:        0.4
+* License:           GNU General Public License v3
+* License URI:       http://www.gnu.org/licenses/gpl-3.0.html
+
+
 Handy toolbar menus for the lazy WordPress developer.
 
-## Description
 
+## Description
 Yet another admin bar menu plugin. This one has modules.
 
-### Modules
 
+### Modules
 * [Site Language](#user-content-site-language)
 * [Plugins](#user-content-plugins)
 * [Icons](#user-content-icons)
 
----
 
 #### Site Language
-
 Update your site’s core language setting in WordPress via toolbar (aka admin bar).
 
-**This is not a plugin for multilingual WordPress, translating content and the like!**
+> **This is not a plugin for multilingual WordPress, translating content and the like!**
+> If you’re interested in running a WordPress site in multiple languages, check out [MultilingualPress](https://wordpress.org/plugins/multilingual-press/).
 
 ![Update Site Language Option via toolbar](https://github.com/glueckpress/_bar/raw/master/modules/site-language/screenshot.gif)
 
@@ -33,7 +41,6 @@ After having activated the plugin, you’ll see a new menu item _Site Language_ 
 
 
 #### Plugins
-
 The Plugins Menu provides simple shortcuts to the plugins page in the back-end, filtered by plugin status. Links open in a new tab/window. Link URLs in the menu read from top to bottom:
 
 * __Plugins__: `[admin_url]/plugins.php`
@@ -46,40 +53,51 @@ The Plugins Menu provides simple shortcuts to the plugins page in the back-end, 
 
 
 ### Icons
-
 Trim top-level menu items in the toolbar to just display a dashicon. Save some space for more modules!
 
 ![Trim top-level menu items in the toolbar to display only icons](https://github.com/glueckpress/_bar/raw/master/modules/icons/screenshot.png)
 
----
 
 ### Languages
-
-* English (en\_US) _(default)_
+* English (en_US) _(default)_
 * German (de_DE)
-* German formal (de\_DE_formal)
+* German formal (de_DE_formal)
 
 
 ## Installation
+### Upload
+1. Download the latest [tagged archive](https://github.com/glueckpress/_bar/releases) (choose the “zip” option).
+2. Go to the __Plugins → Add New__ screen and click the __Upload__ tab.
+3. Upload the zipped archive directly.
+4. Go to the Plugins screen and click __Activate__.
 
-* If you don’t know how to install a plugin for WordPress, [here’s how](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
-* You might want to check the folder name after you downloaded and unzipped the ZIP file. GitHub appends suffixes to the actual folder name; you should always edit it to be equal to this repository’s name before uploading to WordPress.
+### Manual
+1. Download the latest [tagged archive](https://github.com/glueckpress/_bar/releases) (choose the “zip” option).
+2. Unzip the archive.
+3. Copy the folder to your `/wp-content/plugins/` directory.
+4. Go to the Plugins screen and click __Activate__.
+
+Check out the Codex for more information about [installing plugins manually](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
+
+### GitHub Updater Plugin
+Install the [GitHub Updater Plugin](https://github.com/afragen/github-updater) by [Andy Fragen](https://github.com/afragen) in order to be able to update this plugin from your WordPress back-end.
 
 
 ## Changelog
+### 0.4
+* added valid README header
+* module|plugins: fixed broken i18n + l10n
+* module|icons: minor css fix
 
 ### 0.3
-
 * simplified module names and css classes.
 * added trim-to-icon support for existing modules.
 * new module: trim parent menu items to display only a dashicon.
 * added support for [GitHub updater plugin](https://github.com/afragen/github-updater) by @afragen.
 
 ### 0.2
-
 * new module: plugins menu.
 * minor enhancements: added settings page url to parent item. mo’ better code styling.
 
 ### 0.1
-
 * Hello world! My pleasure. :bouquet:

@@ -2,12 +2,12 @@
 /**
  * Plugin Name:       _bar
  * Description:       Handy toolbar menus for the lazy WordPress developer.
- * Version:           0.3
+ * Version:           0.4
  * Author:            Caspar Hübinger
  * Plugin URI:        https://github.com/glueckpress/_bar/
  * GitHub Plugin URI: https://github.com/glueckpress/_bar
  * Author URI:        https://profiles.wordpress.org/glueckpress
- * License: GNU       General Public License v3
+ * License:           GNU General Public License v3
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       _bar
  * Domain Path:       /languages

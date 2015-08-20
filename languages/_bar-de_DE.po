@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _bar\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Thu Aug 06 2015 09:28:16 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Thu Aug 06 2015 10:06:45 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Thu Aug 20 2015 13:33:30 GMT+0200 (CEST)\n"
 "Last-Translator: caspar <caspar@glueckpress.com>\n"
 "Language-Team: \n"
 "Language: German\n"
@@ -22,7 +22,23 @@ msgstr ""
 "X-Generator: Loco - https://localise.biz/\n"
 "X-Loco-Target-Locale: de_DE"
 
-#: ../_bar.php:64
+#: ../modules/plugins/plugins.php:38
+msgid "All"
+msgstr "Alle"
+
+#: ../modules/plugins/plugins.php:39
+msgid "Active"
+msgstr "Aktive"
+
+#: ../modules/plugins/plugins.php:40
+msgid "Inactive"
+msgstr "Inaktive"
+
+#: ../modules/plugins/plugins.php:41
+msgid "Recently Active"
+msgstr "Kürzlich aktive"
+
+#: ../modules/site-language/site-language.php:38
 msgid ""
 "Site language could not be switched. You’re being redirected to Settings "
 "&rarr; General."
@@ -30,6 +46,9 @@ msgstr ""
 "Sprache der Website konnte nicht umgestellt werden. Du wirst weitergeleitet "
 "zu Einstellungen &rarr; Allgemein."
 
-#: ../_bar.php:143
+#: ../modules/site-language/site-language.php:121
 msgid "Site Language"
-msgstr "Sprache der Website\n"
+msgstr "Sprache der Website"
+
+msgid "Handy toolbar menus for the lazy WordPress developer."
+msgstr "Praktische Werkzeugleiste für faule WordPress-Entwickler_innen."

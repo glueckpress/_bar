@@ -35,10 +35,10 @@ function _bar__plugins( $bar ) {
 
 	/* Plugin status pages. */
 	$plugin_status = array(
-		'all'                => __( 'All' ),
-		'active'             => __( 'Active' ),
-		'inactive'           => __( 'Inactive' ),
-		'recently_activated' => __( 'Recently Active' ),
+		'all'                => __( 'All', '_bar' ),
+		'active'             => __( 'Active', '_bar' ),
+		'inactive'           => __( 'Inactive', '_bar' ),
+		'recently_activated' => __( 'Recently Active', '_bar' ),
 		'upgrade'            => __( 'Update Available' ),
 	);
 
