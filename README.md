@@ -84,6 +84,12 @@ Install the [GitHub Updater Plugin](https://github.com/afragen/github-updater) b
 
 
 ## Changelog
+
+### 0.5
+* module|icons: removed unreliable stylesheet dependency
+* module|icons: added plugin version number to enqueued stylesheet
+* updated translations
+
 ### 0.4
 * added valid README header
 * module|plugins: fixed broken i18n + l10n

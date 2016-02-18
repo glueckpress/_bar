@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _bar\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Thu Aug 06 2015 09:28:16 GMT+0200 (CEST)\n"
-"POT-Revision-Date: Thu Aug 20 2015 13:23:31 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Thu Feb 18 2016 20:17:53 GMT+0100 (CET)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,20 +24,43 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: ../modules/plugins/plugins.php:38
+msgid "Handy toolbar menus for the lazy WordPress developer."
+msgstr ""
+
+#. Description of the plugin
+msgid "Trim toolbar parent menu items with dashicons to icons only."
+msgstr ""
+
+#. Description of the plugin
+msgid "Add a toolbar menu with quick links to admin plugins pages."
+msgstr ""
+
+#: ../modules/plugins/plugins.php:27
+msgid "Plugins"
+msgstr ""
+
+#: ../modules/plugins/plugins.php:37
 msgid "All"
 msgstr ""
 
-#: ../modules/plugins/plugins.php:39
+#: ../modules/plugins/plugins.php:38
 msgid "Active"
 msgstr ""
 
-#: ../modules/plugins/plugins.php:40
+#: ../modules/plugins/plugins.php:39
 msgid "Inactive"
 msgstr ""
 
-#: ../modules/plugins/plugins.php:41
+#: ../modules/plugins/plugins.php:40
 msgid "Recently Active"
+msgstr ""
+
+#: ../modules/plugins/plugins.php:41
+msgid "Update Available"
+msgstr ""
+
+#. Description of the plugin
+msgid "Update your site’s core language setting via toolbar."
 msgstr ""
 
 #: ../modules/site-language/site-language.php:38
@@ -50,5 +73,6 @@ msgstr ""
 msgid "Site Language"
 msgstr ""
 
-msgid "Handy toolbar menus for the lazy WordPress developer."
+#: ../modules/site-language/site-language.php:169
+msgid "English"
 msgstr ""

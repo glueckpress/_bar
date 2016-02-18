@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _bar\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Thu Aug 06 2015 09:28:16 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Thu Aug 20 2015 13:33:30 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Thu Feb 18 2016 20:25:28 GMT+0100 (CET)\n"
 "Last-Translator: caspar <caspar@glueckpress.com>\n"
 "Language-Team: \n"
 "Language: German\n"
@@ -22,21 +22,44 @@ msgstr ""
 "X-Generator: Loco - https://localise.biz/\n"
 "X-Loco-Target-Locale: de_DE"
 
-#: ../modules/plugins/plugins.php:38
+#. Description of the plugin
+msgid "Trim toolbar parent menu items with dashicons to icons only."
+msgstr "Für Toolbar-Menüs mit Dashicons nur Icons anzeigen."
+
+#. Description of the plugin
+msgid "Add a toolbar menu with quick links to admin plugins pages."
+msgstr "Toolbar-Menü mit Direktlinks zu Admin-Plugins-Seiten hinzufügen."
+
+msgid "Handy toolbar menus for the lazy WordPress developer."
+msgstr "Praktische Werkzeugleiste für effiziente WordPress-Entwickler_innen."
+
+#: ../modules/plugins/plugins.php:27
+msgid "Plugins"
+msgstr "Plugins"
+
+#: ../modules/plugins/plugins.php:37
 msgid "All"
 msgstr "Alle"
 
-#: ../modules/plugins/plugins.php:39
+#: ../modules/plugins/plugins.php:38
 msgid "Active"
 msgstr "Aktive"
 
-#: ../modules/plugins/plugins.php:40
+#: ../modules/plugins/plugins.php:39
 msgid "Inactive"
 msgstr "Inaktive"
 
-#: ../modules/plugins/plugins.php:41
+#: ../modules/plugins/plugins.php:40
 msgid "Recently Active"
 msgstr "Kürzlich aktive"
+
+#: ../modules/plugins/plugins.php:41
+msgid "Update Available"
+msgstr "Aktualisierung verfügbar"
+
+#. Description of the plugin
+msgid "Update your site’s core language setting via toolbar."
+msgstr "Aktualisiert die Spracheinstellung deiner Site über die Toolbar."
 
 #: ../modules/site-language/site-language.php:38
 msgid ""
@@ -50,5 +73,6 @@ msgstr ""
 msgid "Site Language"
 msgstr "Sprache der Website"
 
-msgid "Handy toolbar menus for the lazy WordPress developer."
-msgstr "Praktische Werkzeugleiste für faule WordPress-Entwickler_innen."
+#: ../modules/site-language/site-language.php:169
+msgid "English"
+msgstr "Englisch"

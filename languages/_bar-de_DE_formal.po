@@ -3,46 +3,76 @@ msgstr ""
 "Project-Id-Version: _bar\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Thu Aug 06 2015 09:28:16 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Thu Aug 20 2015 13:33:24 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Thu Feb 18 2016 20:24:24 GMT+0100 (CET)\n"
 "Last-Translator: caspar <caspar@glueckpress.com>\n"
 "Language-Team: \n"
-"Language: Unknown locale\n"
+"Language: German\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/\n"
-"X-Loco-Target-Locale: en_GB\n"
-"X-Poedit-SearchPath-0: .."
+"X-Loco-Target-Locale: de_DE"
 
-msgid "Active"
-msgstr "Aktive"
+#. Description of the plugin
+msgid "Trim toolbar parent menu items with dashicons to icons only."
+msgstr "Für Toolbar-Menüs mit Dashicons nur Icons anzeigen."
 
+#. Description of the plugin
+msgid "Add a toolbar menu with quick links to admin plugins pages."
+msgstr "Toolbar-Menü mit Direktlinks zu Admin-Plugins-Seiten hinzufügen."
+
+msgid "Handy toolbar menus for the lazy WordPress developer."
+msgstr "Praktische Werkzeugleiste für effiziente WordPress-Entwickler_innen."
+
+#: ../modules/plugins/plugins.php:27
+msgid "Plugins"
+msgstr "Plugins"
+
+#: ../modules/plugins/plugins.php:37
 msgid "All"
 msgstr "Alle"
 
-msgid "Handy toolbar menus for the lazy WordPress developer."
-msgstr "Praktische Werkzeugleiste für faule WordPress-Entwickler_innen."
+#: ../modules/plugins/plugins.php:38
+msgid "Active"
+msgstr "Aktive"
 
+#: ../modules/plugins/plugins.php:39
 msgid "Inactive"
 msgstr "Inaktive"
 
+#: ../modules/plugins/plugins.php:40
 msgid "Recently Active"
 msgstr "Kürzlich aktive"
 
-msgid "Site Language"
-msgstr "Sprache der Website\n"
+#: ../modules/plugins/plugins.php:41
+msgid "Update Available"
+msgstr "Aktualisierung verfügbar"
 
+#. Description of the plugin
+msgid "Update your site’s core language setting via toolbar."
+msgstr "Aktualisiert die Spracheinstellung Ihrer Site über die Toolbar."
+
+#: ../modules/site-language/site-language.php:38
 msgid ""
 "Site language could not be switched. You’re being redirected to Settings "
 "&rarr; General."
 msgstr ""
 "Sprache der Website konnte nicht umgestellt werden. Sie werden "
 "weitergeleitet zu Einstellungen &rarr; Allgemein."
+
+#: ../modules/site-language/site-language.php:121
+msgid "Site Language"
+msgstr "Sprache der Website"
+
+#: ../modules/site-language/site-language.php:169
+msgid "English"
+msgstr "Englisch"

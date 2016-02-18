@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       _bar
  * Description:       Handy toolbar menus for the lazy WordPress developer.
- * Version:           0.4
+ * Version:           0.5
  * Author:            Caspar Hübinger
  * Plugin URI:        https://github.com/glueckpress/_bar/
  * GitHub Plugin URI: https://github.com/glueckpress/_bar
@@ -13,11 +13,7 @@
  * Domain Path:       /languages
  */
 
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
+defined( 'ABSPATH' ) or die( 'Bah.' );
 
 /**
  * Initialize plugin.
@@ -54,3 +50,22 @@ function _bar__load() {
 }
 add_action( 'plugins_loaded', '_bar__load' );
 
+/**
+ * Retrieve data from file header.
+ *
+ * @return array Plugin file headers
+ */
+function _bar__plugin_data() {
+
+	// List of headers to retrieve.
+	$headers = array(
+		'name'       => 'Plugin Name',
+		'version'    => 'Version',
+		'plugin_uri' => 'Plugin URI',
+	);
+
+	// Beacause get_plugin_data() will only work in wp-admin.
+	$file_data = get_file_data( __FILE__, $headers );
+
+	return $file_data;
+}
