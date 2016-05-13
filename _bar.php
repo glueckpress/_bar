@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       _bar
  * Description:       Handy toolbar menus for the lazy WordPress developer.
- * Version:           0.5
+ * Version:           0.6
  * Author:            Caspar Hübinger
  * Plugin URI:        https://github.com/glueckpress/_bar/
  * GitHub Plugin URI: https://github.com/glueckpress/_bar
@@ -38,14 +38,17 @@ function _bar__load() {
 	 */
 	$module_dir = dirname( __FILE__ ) . '/modules';
 
-	// Site Language
+	// Site language toolbar menu.
 	require_once( $module_dir . '/site-language/site-language.php' );
 
-	// Plugins Menu
+	// Plugins toolbar menu.
 	require_once( $module_dir . '/plugins/plugins.php' );
 
-	// Trim default menu items
+	// Trim default toolbar menu items to icons.
 	require_once( $module_dir . '/icons/icons.php' );
+
+	// Admin footer menu with dedicated accesskeys for admin pages.
+	require_once( $module_dir . '/accesskeys/accesskeys.php' );
 
 }
 add_action( 'plugins_loaded', '_bar__load' );

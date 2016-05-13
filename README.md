@@ -3,7 +3,7 @@
 * Tags:              admin, adminbar, adminmenu, developer, toolbar
 * Requires at least: 4.0
 * Tested up to:      4.3
-* Stable tag:        0.4
+* Stable tag:        0.6
 * License:           GNU General Public License v3
 * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,10 +19,11 @@ Yet another admin bar menu plugin. This one has modules.
 * [Site Language](#user-content-site-language)
 * [Plugins](#user-content-plugins)
 * [Icons](#user-content-icons)
+* [Access Keys](#user-content-access-keys)
 
 
 #### Site Language
-Update your site’s core language setting in WordPress via toolbar (aka admin bar).
+Adds a toolbar menu that enables you to update your site’s main language.
 
 > **This is not a plugin for multilingual WordPress, translating content and the like!**
 > If you’re interested in running a WordPress site in multiple languages, check out [MultilingualPress](https://wordpress.org/plugins/multilingual-press/).
@@ -37,11 +38,11 @@ This module simply provides a shortcut for all of the above.
 
 After having activated the plugin, you’ll see a new menu item _Site Language_ in your admin bar. Its submenu will list all core translations you have previously installed. (It will not offer you the option to install a new one.)
 
-**Clicking on a language link will update the site language option and reload the current page. Voilá, site language updated!** :boom:
+**Clicking on a language link will update the site language option and reload the current page. If you use this in production, be careful: the front-end’s language will be affected as well!**
 
 
 #### Plugins
-The Plugins Menu provides simple shortcuts to the plugins page in the back-end, filtered by plugin status. Links open in a new tab/window. Link URLs in the menu read from top to bottom:
+Provides simple shortcuts to the plugins page in the back-end, filtered by plugin status. Links open in a new tab/window. Link URLs in the menu read from top to bottom:
 
 * __Plugins__: `[admin_url]/plugins.php`
 * __All__: `[admin_url]/plugins.php?plugin_status=all`
@@ -53,16 +54,29 @@ The Plugins Menu provides simple shortcuts to the plugins page in the back-end, 
 
 
 ### Icons
-Trim top-level menu items in the toolbar to just display a dashicon. Save some space for more modules!
+Trims top-level menu items in the toolbar to just display an icon.
 
 ![Trim top-level menu items in the toolbar to display only icons](https://github.com/glueckpress/_bar/raw/master/modules/icons/screenshot.png)
 
+### Access Keys
+Adds a dedicated, visually hidden menu in admin footer. Menu items provide access key support for specific admin pages.
+
+#### Default keys
+* `e` - Posts (“edit”)
+* `d` - Pages (“documents”)
+* `p` - Plugins
+* `m` - Media
+
+#### Sample plugin support for WP Rocket
+* `r` - Settings (“rocket”)
+* `c` - Clear cache
+
+---
 
 ### Languages
 * English (en_US) _(default)_
 * German (de_DE)
 * German formal (de_DE_formal)
-
 
 ## Installation
 ### Upload
