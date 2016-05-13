@@ -71,6 +71,21 @@ Adds a dedicated, visually hidden menu in admin footer. Menu items provide acces
 * `r` - Settings (“rocket”)
 * `c` - Clear cache
 
+#### Extendable via filter
+```
+add_filter( 'bar__accesskeys_menu_items', function ( $menu_items ) {
+
+	// Sample: accesskey for General Settings page.
+	$menu_items['sample_menu_item_id'] = array(
+		'key' => 'o', // accesskey
+		'url' => admin_url( 'options-general.php' ), // admin url
+		'label' => __( 'Settings' ), // link text
+	);
+
+	return $menu_items;
+} );
+```
+
 ---
 
 ### Languages
